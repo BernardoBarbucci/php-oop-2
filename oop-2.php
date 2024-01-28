@@ -41,6 +41,10 @@ class DOG extends ITEMS
         // richiama il construct della classe parent 
         parent::__construct($name, $price, "Cani", $type, $size, $brand, "Cani");
         $this->breed = $breed;
+        $this->lifeStage = $lifeStage;
+        $this->weightRange = $weightRange;
+        $this->chewable = $chewable;
+        $this->activityLevel = $activityLevel;
     }
 }
 
