@@ -163,34 +163,6 @@ $catToys = [
     new CatToy("Catnip Mouse", "CozyCats", "Plush", "Kitten", true, "Low", "Soft", false, "Gray"),
 ];
 
-
-// // ECHO
-// // DogToy
-// foreach ($dogToys as $dogToy) {
-//     echo "Dog Toy: {$dogToy->name}\n";
-//     echo "Brand: {$dogToy->brand}\n";
-//     echo "Material: {$dogToy->material}\n";
-//     echo "Age Group: {$dogToy->ageGroup}\n";
-//     echo "Interactive: " . ($dogToy->interactive ? 'Yes' : 'No') . "\n";
-//     echo "Durability: {$dogToy->durability}\n";
-//     echo "Play Style: {$dogToy->playStyle}\n";
-//     echo "Chewable: " . ($dogToy->chewable ? 'Yes' : 'No') . "\n";
-//     echo "Size: {$dogToy->size}\n";
-// }
-
-// // CatToy
-// foreach ($catToys as $catToy) {
-//     echo "Cat Toy: {$catToy->name}\n";
-//     echo "Brand: {$catToy->brand}\n";
-//     echo "Material: {$catToy->material}\n";
-//     echo "Age Group: {$catToy->ageGroup}\n";
-//     echo "Interactive: " . ($catToy->interactive ? 'Yes' : 'No') . "\n";
-//     echo "Durability: {$catToy->durability}\n";
-//     echo "Play Style: {$catToy->playStyle}\n";
-//     echo "Catnip: " . ($catToy->catnip ? 'Yes' : 'No') . "\n";
-//     echo "Color: {$catToy->color}\n";
-// }
-
 ?>
 
 <!DOCTYPE html>
@@ -201,8 +173,7 @@ $catToys = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Shop</title>
     <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
 <body class="bg-dark">
@@ -217,8 +188,7 @@ $catToys = [
     <main>
         <section class="container-fluid">
             <div class="mb-4">
-                <select class="form-select border border-warning" aria-label="Default select example"
-                    style="width: 20rem;">
+                <select class="form-select border border-warning ms-1" aria-label="Default select example" style="width: 20rem;">
                     <option selected>Select a pet Type</option>
                     <option value="1">Dog</option>
                     <option value="2">Cat</option>
@@ -226,25 +196,27 @@ $catToys = [
             </div>
         </section>
         <section class="container-fluid">
-            <!-- foreach attraverso php da implementare successivamente -->
-            <div class="card border border-info" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">item name</h5>
-                    <p class="card-text">description</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">price</li>
-                    <li class="list-group-item">another info</li>
-                    <li class="list-group-item">another info</li>
-                    <li class="list-group-item">another info</li>
-                    <li class="list-group-item">another info</li>
-                </ul>
-                <!-- <div class="card-body">
-                        <a href="#" class="card-link">Buy Item</a>
-                        <a href="#" class="card-link">Another link</a>
-                    </div> -->
+            <div class="row p-3">
+                <?php foreach ($dogToys as $dogToy) : ?>
+                    <div class="card m-2 " style="width: 18rem;">
+                        <!-- Immagine: <img src="<?php echo $dogToy->imageUrl; ?>" class="card-img-top" alt="..."> -->
+                        <div class="card-body">
+                            <h5 class="card-title"><?php echo $dogToy->name; ?></h5>
+                            <p class="card-text"><?php echo $dogToy->description; ?></p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Price: $<?php echo $dogToy->price; ?></li>
+                            <li class="list-group-item">Brand: <?php echo $dogToy->brand; ?></li>
+                            <li class="list-group-item">Type: <?php echo $dogToy->type; ?></li>
+                            <li class="list-group-item">Age Group: <?php echo $dogToy->ageGroup; ?></li>
+                            <li class="list-group-item">Interactive: <?php echo $dogToy->interactive ? 'Yes' : 'No'; ?></li>
+                        </ul>
+                    </div>
+                <?php endforeach; ?>
             </div>
+
+            <!-- da fare lo stesso per cat  -->
+
         </section>
     </main>
 
