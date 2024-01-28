@@ -195,12 +195,13 @@ $catToys = [
                     style="width: 20rem;">
                     <option selected>Select a pet Type</option>
                     <option value="1">Dog</option>
-                    <option value="2">Cat <i class="fa-solid fa-cat"></i></option>
+                    <option value="2">Cat</option>
                 </select>
             </div>
         </section>
         <section class="container-fluid">
             <div class="row p-3">
+                <!-- dog items -->
                 <?php foreach ($dogToys as $dogToy) : ?>
                 <div class="card m-2 " style="width: 18rem;">
                     <!-- Immagine: <img src="<?php echo $dogToy->imageUrl; ?>" class="card-img-top" alt="..."> -->
@@ -217,10 +218,25 @@ $catToys = [
                     </ul>
                 </div>
                 <?php endforeach; ?>
+
+                <!-- cat items  -->
+                <?php foreach ($catToys as $catToy) : ?>
+                <div class="card m-2" style="width: 18rem;">
+                    <!-- Immagine: <img src="<?php echo $catToy->imageUrl; ?>" class="card-img-top" alt="..."> -->
+                    <div class="card-body">
+                        <h5 class="card-title"><?php echo $catToy->name; ?> <i class="fa-solid fa-cat"></i></h5>
+                        <p class="card-text"><?php echo $catToy->description; ?></p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Price: $<?php echo $catToy->price; ?></li>
+                        <li class="list-group-item">Brand: <?php echo $catToy->brand; ?></li>
+                        <li class="list-group-item">Type: <?php echo $catToy->type; ?></li>
+                        <li class="list-group-item">Age Group: <?php echo $catToy->ageGroup; ?></li>
+                        <li class="list-group-item">Interactive: <?php echo $catToy->interactive ? 'Yes' : 'No'; ?></li>
+                    </ul>
+                </div>
+                <?php endforeach; ?>
             </div>
-
-            <!-- da fare lo stesso per cat  -->
-
         </section>
     </main>
 
