@@ -29,7 +29,6 @@ class ITEMS
 // classe estesa per cane 
 class DOG extends ITEMS
 {
-
     public $breed;
     public $lifeStage;
     public $weightRange;
@@ -38,7 +37,6 @@ class DOG extends ITEMS
 
     public function __construct($name, $price, $type, $size, $brand, $breed, $lifeStage, $weightRange, $chewable, $activityLevel)
     {
-        // richiama il construct della classe parent 
         parent::__construct($name, $price, "Cani", $type, $size, $brand, "Cani");
         $this->breed = $breed;
         $this->lifeStage = $lifeStage;
@@ -47,7 +45,6 @@ class DOG extends ITEMS
         $this->activityLevel = $activityLevel;
     }
 }
-
 
 // classe estesa per gatto 
 class CAT extends ITEMS
@@ -60,7 +57,6 @@ class CAT extends ITEMS
 
     public function __construct($name, $price, $type, $size, $brand, $color, $indoor, $hairLength, $scratchingPost, $hypoallergenic)
     {
-        // richiama il construct della classe parent 
         parent::__construct($name, $price, "Gatti", $type, $size, $brand, "Gatti");
         $this->color = $color;
         $this->indoor = $indoor;
@@ -69,6 +65,7 @@ class CAT extends ITEMS
         $this->hypoallergenic = $hypoallergenic;
     }
 }
+
 
 // classe estesa per giochi per il cane 
 class DogToy extends DOG
