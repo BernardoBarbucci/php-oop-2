@@ -207,7 +207,7 @@ $catToys = [
 
 <body class="bg-dark">
     <header>
-        <section class="text-white text-center">
+        <section class="text-white text-center my-4">
             <h1>
                 Pet Shop
             </h1>
@@ -216,27 +216,34 @@ $catToys = [
 
     <main>
         <section class="container-fluid">
-            <div class="row">
-
-                <!-- foreach attraverso php da implementare successivamente -->
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">An item</li>
-                        <li class="list-group-item">A second item</li>
-                        <li class="list-group-item">A third item</li>
-                    </ul>
-                    <div class="card-body">
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
-                    </div>
+            <div class="mb-4">
+                <select class="form-select border border-warning" aria-label="Default select example"
+                    style="width: 20rem;">
+                    <option selected>Select a pet Type</option>
+                    <option value="1">Dog</option>
+                    <option value="2">Cat</option>
+                </select>
+            </div>
+        </section>
+        <section class="container-fluid">
+            <!-- foreach attraverso php da implementare successivamente -->
+            <div class="card border border-info" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">item name</h5>
+                    <p class="card-text">description</p>
                 </div>
-
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">price</li>
+                    <li class="list-group-item">another info</li>
+                    <li class="list-group-item">another info</li>
+                    <li class="list-group-item">another info</li>
+                    <li class="list-group-item">another info</li>
+                </ul>
+                <!-- <div class="card-body">
+                        <a href="#" class="card-link">Buy Item</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div> -->
             </div>
         </section>
     </main>
