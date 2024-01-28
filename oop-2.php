@@ -111,8 +111,41 @@ class CatToy extends CAT
 }
 
 // // classe estesa per cucce DOG 
+class DogBed extends DOG
+{
+    public $material;
+    public $bedSize;
+    public $washable;
+    public $orthopedic;
+    public $design;
 
-
-
+    public function __construct($name, $price, $type, $brand, $material, $bedSize, $washable, $orthopedic, $design)
+    {
+        parent::__construct($name, $price, $type, null, $brand, null, null, null, null, null);
+        $this->material = $material;
+        $this->bedSize = $bedSize;
+        $this->washable = $washable;
+        $this->orthopedic = $orthopedic;
+        $this->design = $design;
+    }
+}
 
 // classe estesa per cucce CAT
+class CatBed extends CAT
+{
+    public $material;
+    public $bedSize;
+    public $washable;
+    public $orthopedic;
+    public $design;
+
+    public function __construct($name, $price, $type, $brand, $material, $bedSize, $washable, $orthopedic, $design)
+    {
+        parent::__construct($name, $price, $type, null, $brand, null, null, null, null, null);
+        $this->material = $material;
+        $this->bedSize = $bedSize;
+        $this->washable = $washable;
+        $this->orthopedic = $orthopedic;
+        $this->design = $design;
+    }
+}
