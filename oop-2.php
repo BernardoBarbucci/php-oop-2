@@ -58,9 +58,14 @@ class CAT extends ITEMS
     public $scratchingPost;
     public $hypoallergenic;
 
-    public function __construct(Type $var = null)
+    public function __construct($name, $price, $type, $size, $brand, $color, $indoor, $hairLength, $scratchingPost, $hypoallergenic)
     {
         // richiama il construct della classe parent 
-
+        parent::__construct($name, $price, "Gatti", $type, $size, $brand, "Gatti");
+        $this->color = $color;
+        $this->indoor = $indoor;
+        $this->hairLength = $hairLength;
+        $this->scratchingPost = $scratchingPost;
+        $this->hypoallergenic = $hypoallergenic;
     }
 }
