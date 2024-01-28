@@ -11,9 +11,10 @@ class ITEMS
     public $quantityInStock;
     public $description;
     public $imageUrl;
+    public $petType;
 
     // construct 
-    public function __construct($name, $price, $category, $type, $size, $brand)
+    public function __construct($name, $price, $category, $type, $size, $brand, $petType)
     {
         $this->name = $name;
         $this->price = $price;
@@ -21,5 +22,28 @@ class ITEMS
         $this->type = $type;
         $this->size = $size;
         $this->brand = $brand;
+        $this->petType = $petType;
     }
+}
+
+// classe estesa per cane 
+class DOG extends ITEMS
+{
+
+    public $breed;
+    public $lifeStage;
+    public $weightRange;
+    public $chewable;
+    public $activityLevel;
+}
+
+
+// classe estesa per gatto 
+class CAT extends ITEMS
+{
+    public $color;
+    public $indoor;
+    public $hairLength;
+    public $scratchingPost;
+    public $hypoallergenic;
 }
