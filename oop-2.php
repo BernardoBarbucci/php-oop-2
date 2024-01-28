@@ -146,3 +146,18 @@ class CatBed extends CAT
         $this->design = $design;
     }
 }
+
+// OBJECTS
+
+//DogToy
+$dogToy = new DogToy(
+    "Palla Rimbalzante",
+    9.99,
+    "Giocattoli",
+    "PetFun",
+    "Tutti",
+    "Gomma",
+    true,
+    "Alta",
+    "Interattivo"
+);
