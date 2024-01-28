@@ -151,8 +151,12 @@ class CatBed extends CAT
 
 // DogToy
 $dogToys = [
-    new DogToy("Squeaky Bone", "19.99$", "Rubber", "All", true, "High", "Interactive", true, "Medium"),
-    new DogToy("Tug-of-War Rope", "14.99$", "Cotton", "Adult", true, "High", "Durable", "Tug-of-War", "Large"),
+    new DogToy("Squeaky Bone", "19.99", "Rubber", "All", true, "High", "Interactive", true, "Medium"),
+    new DogToy("Tug-of-War Rope", "14.99", "Cotton", "Adult", true, "High", "Durable", "Tug-of-War", "Large"),
+    new DogToy("Chew Ball", "9.99", "Rubber", "Puppy", true, "Medium", "Chewable", "Medium", "Fetch"),
+    new DogToy("Flying Disc", "12.99", "Plastic", "All", true, "High", "Durable", "Fetch", "Large"),
+    new DogToy("Plush Squeaky Toy", "8.99", "Plush", "All", false, "Low", "Soft", "Not Chewable", "Small"),
+    new DogToy("Puzzle Toy", "17.99", "Plastic", "Adult", false, "Medium", "Interactive", "Moderate", "Puzzle Solving"),
 ];
 
 
@@ -201,13 +205,13 @@ $catToys = [
             <div class="row p-3">
                 <!-- dog items -->
                 <?php foreach ($dogToys as $dogToy) : ?>
-                    <div class="card m-2 " style="width: 18rem;">
+                    <div class="card m-2 bg-primary" style="width: 18rem;">
                         <!-- Immagine: <img src="<?php echo $dogToy->imageUrl; ?>" class="card-img-top" alt="..."> -->
                         <div class="card-body">
                             <h5 class="card-title"><?php echo $dogToy->name; ?> <i class="fa-solid fa-dog"></i></h5>
                             <p class="card-text"><?php echo $dogToy->description; ?></p>
                         </div>
-                        <ul class="list-group list-group-flush">
+                        <ul class="list-group list-group-flush pb-3 rounded">
                             <li class="list-group-item">Price: $<?php echo $dogToy->price; ?></li>
                             <li class="list-group-item">Brand: <?php echo $dogToy->brand; ?></li>
                             <li class="list-group-item">Type: <?php echo $dogToy->type; ?></li>
@@ -221,13 +225,13 @@ $catToys = [
 
                 <!-- cat items  -->
                 <?php foreach ($catToys as $catToy) : ?>
-                    <div class="card m-2" style="width: 18rem;">
+                    <div class="card m-2 bg-success" style="width: 18rem;">
                         <!-- Immagine: <img src="<?php echo $catToy->imageUrl; ?>" class="card-img-top" alt="..."> -->
                         <div class="card-body">
                             <h5 class="card-title"><?php echo $catToy->name; ?> <i class="fa-solid fa-cat"></i></h5>
                             <p class="card-text"><?php echo $catToy->description; ?></p>
                         </div>
-                        <ul class="list-group list-group-flush">
+                        <ul class="list-group list-group-flush pb-3 rounded">
                             <li class="list-group-item">Price: $<?php echo $catToy->price; ?></li>
                             <li class="list-group-item">Brand: <?php echo $catToy->brand; ?></li>
                             <li class="list-group-item">Type: <?php echo $catToy->type; ?></li>
