@@ -274,7 +274,10 @@ $catBeds = [
                             <ul class="list-group list-group-flush pb-3 rounded">
                                 <li class="list-group-item">Price: $<?php echo $dogBed->price; ?></li>
                                 <li class="list-group-item">Brand: <?php echo $dogBed->brand; ?></li>
-                                <!-- altri dettagli specifici per i letti per cani -->
+                                <li class="list-group-item">Material: <?php echo $dogBed->material; ?></li>
+                                <li class="list-group-item">Brand: <?php echo $dogBed->brand; ?></li>
+                                <li class="list-group-item">Design: <?php echo $dogBed->design; ?></li>
+                                <li class="list-group-item">Washable: <?php echo $dogBed->washable; ?></li>
                             </ul>
                         </div>
                     <?php endforeach; ?>
