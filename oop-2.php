@@ -35,6 +35,13 @@ class DOG extends ITEMS
     public $weightRange;
     public $chewable;
     public $activityLevel;
+
+    public function __construct($name, $price, $type, $size, $brand, $breed, $lifeStage, $weightRange, $chewable, $activityLevel)
+    {
+        // richiama il construct della classe parent 
+        parent::__construct($name, $price, "Cani", $type, $size, $brand, "Cani");
+        $this->breed = $breed;
+    }
 }
 
 
@@ -46,4 +53,10 @@ class CAT extends ITEMS
     public $hairLength;
     public $scratchingPost;
     public $hypoallergenic;
+
+    public function __construct(Type $var = null)
+    {
+        // richiama il construct della classe parent 
+
+    }
 }
