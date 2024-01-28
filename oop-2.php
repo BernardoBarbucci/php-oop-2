@@ -149,15 +149,64 @@ class CatBed extends CAT
 
 // OBJECTS
 
-//DogToy
-$dogToy = new DogToy(
-    "Palla Rimbalzante",
-    9.99,
-    "Giocattoli",
-    "PetFun",
-    "Tutti",
-    "Gomma",
-    true,
-    "Alta",
-    "Interattivo"
-);
+// DogToy
+$dogToys = [
+    new DogToy("Squeaky Bone", "PetFun", "Rubber", "All", true, "High", "Interactive", true, "Medium"),
+    new DogToy("Tug-of-War Rope", "PlayfulPets", "Cotton", "Adult", true, "High", "Durable", "Tug-of-War", "Large"),
+];
+
+
+// CatToy
+
+$catToys = [
+    new CatToy("Feather Teaser", "PlayfulCats", "Plastic", "All", true, "Medium", "Interactive", true, "Multi-color"),
+    new CatToy("Catnip Mouse", "CozyCats", "Plush", "Kitten", true, "Low", "Soft", false, "Gray"),
+];
+
+
+// ECHO
+// DogToy
+foreach ($dogToys as $dogToy) {
+    echo "Dog Toy: {$dogToy->name}\n";
+    echo "Brand: {$dogToy->brand}\n";
+    echo "Material: {$dogToy->material}\n";
+    echo "Age Group: {$dogToy->ageGroup}\n";
+    echo "Interactive: " . ($dogToy->interactive ? 'Yes' : 'No') . "\n";
+    echo "Durability: {$dogToy->durability}\n";
+    echo "Play Style: {$dogToy->playStyle}\n";
+    echo "Chewable: " . ($dogToy->chewable ? 'Yes' : 'No') . "\n";
+    echo "Size: {$dogToy->size}\n";
+}
+
+// CatToy
+foreach ($catToys as $catToy) {
+    echo "Cat Toy: {$catToy->name}\n";
+    echo "Brand: {$catToy->brand}\n";
+    echo "Material: {$catToy->material}\n";
+    echo "Age Group: {$catToy->ageGroup}\n";
+    echo "Interactive: " . ($catToy->interactive ? 'Yes' : 'No') . "\n";
+    echo "Durability: {$catToy->durability}\n";
+    echo "Play Style: {$catToy->playStyle}\n";
+    echo "Catnip: " . ($catToy->catnip ? 'Yes' : 'No') . "\n";
+    echo "Color: {$catToy->color}\n";
+}
+
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Shop</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+
+</body>
+
+</html>
