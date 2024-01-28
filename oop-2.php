@@ -151,16 +151,16 @@ class CatBed extends CAT
 
 // DogToy
 $dogToys = [
-    new DogToy("Squeaky Bone", "PetFun", "Rubber", "All", true, "High", "Interactive", true, "Medium"),
-    new DogToy("Tug-of-War Rope", "PlayfulPets", "Cotton", "Adult", true, "High", "Durable", "Tug-of-War", "Large"),
+    new DogToy("Squeaky Bone", "19.99$", "Rubber", "All", true, "High", "Interactive", true, "Medium"),
+    new DogToy("Tug-of-War Rope", "14.99$", "Cotton", "Adult", true, "High", "Durable", "Tug-of-War", "Large"),
 ];
 
 
 // CatToy
 
 $catToys = [
-    new CatToy("Feather Teaser", "PlayfulCats", "Plastic", "All", true, "Medium", "Interactive", true, "Multi-color"),
-    new CatToy("Catnip Mouse", "CozyCats", "Plush", "Kitten", true, "Low", "Soft", false, "Gray"),
+    new CatToy("Feather Teaser", "9.99$", "Plastic", "All", true, "Medium", "Interactive", true, "Multi-color"),
+    new CatToy("Catnip Mouse", "12.99$", "Plush", "Kitten", true, "Low", "Soft", false, "Gray"),
 ];
 
 ?>
@@ -173,8 +173,7 @@ $catToys = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Shop</title>
     <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/5bf3821641.js" crossorigin="anonymous"></script>
 </head>
@@ -191,8 +190,7 @@ $catToys = [
     <main>
         <section class="container-fluid">
             <div class="mb-4">
-                <select class="form-select border border-warning ms-1" aria-label="Default select example"
-                    style="width: 20rem;">
+                <select class="form-select border border-warning ms-1" aria-label="Default select example" style="width: 20rem;">
                     <option selected>Select a pet Type</option>
                     <option value="1">Dog</option>
                     <option value="2">Cat</option>
@@ -203,38 +201,42 @@ $catToys = [
             <div class="row p-3">
                 <!-- dog items -->
                 <?php foreach ($dogToys as $dogToy) : ?>
-                <div class="card m-2 " style="width: 18rem;">
-                    <!-- Immagine: <img src="<?php echo $dogToy->imageUrl; ?>" class="card-img-top" alt="..."> -->
-                    <div class="card-body">
-                        <h5 class="card-title"><?php echo $dogToy->name; ?> <i class="fa-solid fa-dog"></i></h5>
-                        <p class="card-text"><?php echo $dogToy->description; ?></p>
+                    <div class="card m-2 " style="width: 18rem;">
+                        <!-- Immagine: <img src="<?php echo $dogToy->imageUrl; ?>" class="card-img-top" alt="..."> -->
+                        <div class="card-body">
+                            <h5 class="card-title"><?php echo $dogToy->name; ?> <i class="fa-solid fa-dog"></i></h5>
+                            <p class="card-text"><?php echo $dogToy->description; ?></p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Price: $<?php echo $dogToy->price; ?></li>
+                            <li class="list-group-item">Brand: <?php echo $dogToy->brand; ?></li>
+                            <li class="list-group-item">Type: <?php echo $dogToy->type; ?></li>
+                            <li class="list-group-item">Age Group: <?php echo $dogToy->ageGroup; ?></li>
+                            <li class="list-group-item">Interactive: <?php echo $dogToy->interactive ? 'Yes' : 'No'; ?></li>
+                            <li class="list-group-item">Durability: <?php echo $dogToy->durability; ?></li>
+                            <li class="list-group-item">Play Style: <?php echo $dogToy->playStyle; ?></li>
+                        </ul>
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Price: $<?php echo $dogToy->price; ?></li>
-                        <li class="list-group-item">Brand: <?php echo $dogToy->brand; ?></li>
-                        <li class="list-group-item">Type: <?php echo $dogToy->type; ?></li>
-                        <li class="list-group-item">Age Group: <?php echo $dogToy->ageGroup; ?></li>
-                        <li class="list-group-item">Interactive: <?php echo $dogToy->interactive ? 'Yes' : 'No'; ?></li>
-                    </ul>
-                </div>
                 <?php endforeach; ?>
 
                 <!-- cat items  -->
                 <?php foreach ($catToys as $catToy) : ?>
-                <div class="card m-2" style="width: 18rem;">
-                    <!-- Immagine: <img src="<?php echo $catToy->imageUrl; ?>" class="card-img-top" alt="..."> -->
-                    <div class="card-body">
-                        <h5 class="card-title"><?php echo $catToy->name; ?> <i class="fa-solid fa-cat"></i></h5>
-                        <p class="card-text"><?php echo $catToy->description; ?></p>
+                    <div class="card m-2" style="width: 18rem;">
+                        <!-- Immagine: <img src="<?php echo $catToy->imageUrl; ?>" class="card-img-top" alt="..."> -->
+                        <div class="card-body">
+                            <h5 class="card-title"><?php echo $catToy->name; ?> <i class="fa-solid fa-cat"></i></h5>
+                            <p class="card-text"><?php echo $catToy->description; ?></p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Price: $<?php echo $catToy->price; ?></li>
+                            <li class="list-group-item">Brand: <?php echo $catToy->brand; ?></li>
+                            <li class="list-group-item">Type: <?php echo $catToy->type; ?></li>
+                            <li class="list-group-item">Age Group: <?php echo $catToy->ageGroup; ?></li>
+                            <li class="list-group-item">Interactive: <?php echo $catToy->interactive ? 'Yes' : 'No'; ?></li>
+                            <li class="list-group-item">Durability: <?php echo $catToy->durability; ?></li>
+                            <li class="list-group-item">Play Style: <?php echo $catToy->playStyle; ?></li>
+                        </ul>
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Price: $<?php echo $catToy->price; ?></li>
-                        <li class="list-group-item">Brand: <?php echo $catToy->brand; ?></li>
-                        <li class="list-group-item">Type: <?php echo $catToy->type; ?></li>
-                        <li class="list-group-item">Age Group: <?php echo $catToy->ageGroup; ?></li>
-                        <li class="list-group-item">Interactive: <?php echo $catToy->interactive ? 'Yes' : 'No'; ?></li>
-                    </ul>
-                </div>
                 <?php endforeach; ?>
             </div>
         </section>
