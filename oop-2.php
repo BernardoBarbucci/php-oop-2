@@ -164,33 +164,32 @@ $catToys = [
 ];
 
 
-// ECHO
-// DogToy
-foreach ($dogToys as $dogToy) {
-    echo "Dog Toy: {$dogToy->name}\n";
-    echo "Brand: {$dogToy->brand}\n";
-    echo "Material: {$dogToy->material}\n";
-    echo "Age Group: {$dogToy->ageGroup}\n";
-    echo "Interactive: " . ($dogToy->interactive ? 'Yes' : 'No') . "\n";
-    echo "Durability: {$dogToy->durability}\n";
-    echo "Play Style: {$dogToy->playStyle}\n";
-    echo "Chewable: " . ($dogToy->chewable ? 'Yes' : 'No') . "\n";
-    echo "Size: {$dogToy->size}\n";
-}
+// // ECHO
+// // DogToy
+// foreach ($dogToys as $dogToy) {
+//     echo "Dog Toy: {$dogToy->name}\n";
+//     echo "Brand: {$dogToy->brand}\n";
+//     echo "Material: {$dogToy->material}\n";
+//     echo "Age Group: {$dogToy->ageGroup}\n";
+//     echo "Interactive: " . ($dogToy->interactive ? 'Yes' : 'No') . "\n";
+//     echo "Durability: {$dogToy->durability}\n";
+//     echo "Play Style: {$dogToy->playStyle}\n";
+//     echo "Chewable: " . ($dogToy->chewable ? 'Yes' : 'No') . "\n";
+//     echo "Size: {$dogToy->size}\n";
+// }
 
-// CatToy
-foreach ($catToys as $catToy) {
-    echo "Cat Toy: {$catToy->name}\n";
-    echo "Brand: {$catToy->brand}\n";
-    echo "Material: {$catToy->material}\n";
-    echo "Age Group: {$catToy->ageGroup}\n";
-    echo "Interactive: " . ($catToy->interactive ? 'Yes' : 'No') . "\n";
-    echo "Durability: {$catToy->durability}\n";
-    echo "Play Style: {$catToy->playStyle}\n";
-    echo "Catnip: " . ($catToy->catnip ? 'Yes' : 'No') . "\n";
-    echo "Color: {$catToy->color}\n";
-}
-
+// // CatToy
+// foreach ($catToys as $catToy) {
+//     echo "Cat Toy: {$catToy->name}\n";
+//     echo "Brand: {$catToy->brand}\n";
+//     echo "Material: {$catToy->material}\n";
+//     echo "Age Group: {$catToy->ageGroup}\n";
+//     echo "Interactive: " . ($catToy->interactive ? 'Yes' : 'No') . "\n";
+//     echo "Durability: {$catToy->durability}\n";
+//     echo "Play Style: {$catToy->playStyle}\n";
+//     echo "Catnip: " . ($catToy->catnip ? 'Yes' : 'No') . "\n";
+//     echo "Color: {$catToy->color}\n";
+// }
 
 ?>
 
@@ -202,10 +201,45 @@ foreach ($catToys as $catToy) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Shop</title>
     <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
-<body>
+<body class="bg-dark">
+    <header>
+        <section class="text-white text-center">
+            <h1>
+                Pet Shop
+            </h1>
+        </section>
+    </header>
+
+    <main>
+        <section class="container-fluid">
+            <div class="row">
+
+                <!-- foreach attraverso php da implementare successivamente -->
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">An item</li>
+                        <li class="list-group-item">A second item</li>
+                        <li class="list-group-item">A third item</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
 
 </body>
 
