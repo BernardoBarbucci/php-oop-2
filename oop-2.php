@@ -283,7 +283,25 @@ $catBeds = [
                     <?php endforeach; ?>
 
                     <!-- cat beds -->
-
+                    <?php foreach ($catBeds as $catBed) : ?>
+                        <div class="card m-2 bg-info" style="width: 18rem;">
+                            <!-- Immagine: <img src="<?php echo $catBed->imageUrl; ?>" class="card-img-top" alt="..."> -->
+                            <div class="card-body">
+                                <h5 class="card-title"><?php echo $catBed->name; ?> <i class="fa-solid fa-cat"></i></h5>
+                                <p class="card-text"><?php echo $catBed->description; ?></p>
+                            </div>
+                            <ul class="list-group list-group-flush pb-3 rounded">
+                                <li class="list-group-item">Price: $<?php echo $catBed->price; ?></li>
+                                <li class="list-group-item">Brand: <?php echo $catBed->brand; ?></li>
+                                <li class="list-group-item">Material: <?php echo $catBed->material; ?></li>
+                                <li class="list-group-item">Design: <?php echo $catBed->design; ?></li>
+                                <li class="list-group-item">Washable: <?php echo $catBed->washable ? 'Yes' : 'No'; ?></li>
+                                <li class="list-group-item">Orthopedic: <?php echo $catBed->orthopedic ? 'Yes' : 'No'; ?>
+                                </li>
+                                <li class="list-group-item">Bed Size: <?php echo $catBed->bedSize; ?></li>
+                            </ul>
+                        </div>
+                    <?php endforeach; ?>
 
                 </div>
             </section>
