@@ -104,7 +104,7 @@ class CatToy extends CAT
     }
 }
 
-// // classe estesa per cucce DOG 
+// classe estesa per cucce DOG 
 class DogBed extends DOG
 {
     public $bedSize;
@@ -277,7 +277,7 @@ $catBeds = [
                                 <li class="list-group-item">Material: <?php echo $dogBed->material; ?></li>
                                 <li class="list-group-item">Brand: <?php echo $dogBed->brand; ?></li>
                                 <li class="list-group-item">Design: <?php echo $dogBed->design; ?></li>
-                                <li class="list-group-item">Washable: <?php echo $dogBed->washable; ?></li>
+                                <li class="list-group-item">Washable: <?php echo $dogBed->washable ? 'Yes' : 'No'; ?></li>
                             </ul>
                         </div>
                     <?php endforeach; ?>
