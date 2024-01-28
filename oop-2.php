@@ -89,3 +89,30 @@ class DogToy extends DOG
         $this->playStyle = $playStyle;
     }
 }
+
+// classe estesa per giochi per il gatto 
+class CatToy extends CAT
+{
+    public $ageGroup;
+    public $material;
+    public $interactive;
+    public $durability;
+    public $playStyle;
+
+    public function __construct($name, $price, $type, $brand, $ageGroup, $material, $interactive, $durability, $playStyle)
+    {
+        parent::__construct($name, $price, $type, null, $brand, null, null, null, null, null);
+        $this->ageGroup = $ageGroup;
+        $this->material = $material;
+        $this->interactive = $interactive;
+        $this->durability = $durability;
+        $this->playStyle = $playStyle;
+    }
+}
+
+// // classe estesa per cucce DOG 
+
+
+
+
+// classe estesa per cucce CAT
