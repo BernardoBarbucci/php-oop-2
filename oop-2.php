@@ -262,6 +262,26 @@ $catBeds = [
                             </ul>
                         </div>
                     <?php endforeach; ?>
+
+                    <!-- dog beds -->
+                    <?php foreach ($dogBeds as $dogBed) : ?>
+                        <div class="card m-2 bg-danger" style="width: 18rem;">
+                            <!-- Immagine: <img src="<?php echo $dogBed->imageUrl; ?>" class="card-img-top" alt="..."> -->
+                            <div class="card-body">
+                                <h5 class="card-title"><?php echo $dogBed->name; ?> <i class="fa-solid fa-dog"></i></h5>
+                                <p class="card-text"><?php echo $dogBed->description; ?></p>
+                            </div>
+                            <ul class="list-group list-group-flush pb-3 rounded">
+                                <li class="list-group-item">Price: $<?php echo $dogBed->price; ?></li>
+                                <li class="list-group-item">Brand: <?php echo $dogBed->brand; ?></li>
+                                <!-- altri dettagli specifici per i letti per cani -->
+                            </ul>
+                        </div>
+                    <?php endforeach; ?>
+
+                    <!-- cat beds -->
+
+
                 </div>
             </section>
         </main>
