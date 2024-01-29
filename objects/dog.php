@@ -28,7 +28,7 @@ class DogToy extends DOG
     public $durability;
     public $playStyle;
 
-    public function __construct($name, $price, $material, $brand, $ageGroup, $interactive, $durability, $playStyle)
+    public function __construct(string $name, float $price, string $material, string $brand, int $ageGroup, string $interactive, string $durability, string $playStyle)
     {
         parent::__construct($name, $price, $material, null, $brand, null, null, null, null, null);
         $this->ageGroup = $ageGroup;
