@@ -37,6 +37,11 @@ function filterItemsByCategory($items, $category)
     });
 }
 
+// seleziona categoria
+$currentCategory = isset($_GET['category']) ? $_GET['category'] : 'all';
+
+
+
 ?>
 
 <!DOCmaterial html>
