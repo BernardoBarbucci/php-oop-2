@@ -29,6 +29,14 @@ class ITEMS
     }
 }
 
+// filtraggio dei prodotti per dog e cat in base alla categoria selezionata nella select
+function filterItemsByCategory($items, $category)
+{
+    return array_filter($items, function ($item) use ($category) {
+        return strtolower($item->category) === strtolower($category);
+    });
+}
+
 ?>
 
 <!DOCmaterial html>
@@ -56,7 +64,7 @@ class ITEMS
         <main>
             <section class="container-fluid">
                 <div class="mb-4">
-                    <select class="form-select border border-warning ms-2" aria-label="Default select example" style="width: 15rem;">
+                    <select class="form-select border border-warning ms-2" id="petCategory" aria-label="Default select example" style="width: 15rem;">
                         <option selected>Select a pet material</option>
                         <option value="1">Dog</option>
                         <option value="2">Cat</option>
