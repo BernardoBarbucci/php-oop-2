@@ -40,7 +40,17 @@ function filterItemsByCategory($items, $category)
 // seleziona categoria
 $currentCategory = isset($_GET['category']) ? $_GET['category'] : 'all';
 
-
+if ($currentCategory === 'dog') {
+    $filteredToys = $DogToy;
+    $filteredBeds = $DogBed;
+} elseif ($currentCategory === 'cat') {
+    $filteredToys === $CatToy;
+    $filteredBeds === $CatBed;
+} else {
+    // mostra tutto di default
+    $filteredToys === array_merge($DogToy, $CatToy);
+    $filteredBeds === array_merge($CatToy, $CatBed);
+}
 
 ?>
 
