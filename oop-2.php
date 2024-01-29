@@ -79,11 +79,14 @@ if ($currentCategory === 'dog') {
         <main>
             <section class="container-fluid">
                 <div class="mb-4">
-                    <select class="form-select border border-warning ms-2" id="petCategory" aria-label="Default select example" style="width: 15rem;">
-                        <option selected>Select a pet material</option>
-                        <option value="1">Dog</option>
-                        <option value="2">Cat</option>
-                    </select>
+                    <form method="get" action="">
+                        <select class="form-select border border-warning ms-2" name="category" aria-label="Default select example" style="width: 15rem;" onchange="this.form.submit()">
+                            <option value="all" <?php echo $currentCategory === 'all' ? 'selected' : ''; ?>>Select a pet
+                                material</option>
+                            <option value="dog" <?php echo $currentCategory === 'dog' ? 'selected' : ''; ?>>Dog</option>
+                            <option value="cat" <?php echo $currentCategory === 'cat' ? 'selected' : ''; ?>>Cat</option>
+                        </select>
+                    </form>
                 </div>
             </section>
             <section class="container-fluid">
