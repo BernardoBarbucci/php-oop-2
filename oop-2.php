@@ -63,7 +63,8 @@ if ($currentCategory === 'dog') {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Pet Shop</title>
         <!-- bootstrap -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <!-- fontawesome -->
         <script src="https://kit.fontawesome.com/5bf3821641.js" crossorigin="anonymous"></script>
     </head>
@@ -81,7 +82,8 @@ if ($currentCategory === 'dog') {
             <section class="container-fluid">
                 <div class="mb-4">
                     <form method="get" action="">
-                        <select class="form-select border border-warning ms-2" name="category" aria-label="Default select example" style="width: 15rem;" onchange="this.form.submit()">
+                        <select class="form-select border border-warning ms-2" name="category"
+                            aria-label="Default select example" style="width: 15rem;" onchange="this.form.submit()">
                             <option value="all" <?php echo $currentCategory === 'all' ? 'selected' : ''; ?>>Select a pet
                                 material</option>
                             <option value="dog" <?php echo $currentCategory === 'dog' ? 'selected' : ''; ?>>Dog</option>
@@ -94,84 +96,84 @@ if ($currentCategory === 'dog') {
                 <div class="row p-3 d-flex justify-content-center">
                     <!-- dog items -->
                     <?php foreach ($filteredToys as $dogToy) : ?>
-                        <div class="card m-2 bg-primary" style="width: 18rem;">
-                            <!-- Immagine: <img src="<?php echo $dogToy->imageUrl; ?>" class="card-img-top" alt="..."> -->
-                            <div class="card-body">
-                                <h5 class="card-title"><?php echo $dogToy->name; ?> <i class="fa-solid fa-dog"></i></h5>
-                                <p class="card-text"><?php echo $dogToy->description; ?></p>
-                            </div>
-                            <ul class="list-group list-group-flush pb-3 rounded">
-                                <li class="list-group-item">Price: $<?php echo $dogToy->price; ?></li>
-                                <li class="list-group-item">Brand: <?php echo $dogToy->brand; ?></li>
-                                <li class="list-group-item">Material: <?php echo $dogToy->material; ?></li>
-                                <li class="list-group-item">Age Group: <?php echo $dogToy->ageGroup; ?></li>
-                                <li class="list-group-item">Interactive: <?php echo $dogToy->interactive ? 'Yes' : 'No'; ?>
-                                </li>
-                                <li class="list-group-item">Durability: <?php echo $dogToy->durability; ?></li>
-                                <li class="list-group-item">Play Style: <?php echo $dogToy->playStyle; ?></li>
-                            </ul>
+                    <div class="card m-2 bg-primary" style="width: 18rem;">
+                        <!-- Immagine: <img src="<?php echo $dogToy->imageUrl; ?>" class="card-img-top" alt="..."> -->
+                        <div class="card-body">
+                            <h5 class="card-title"><?php echo $dogToy->name; ?> <i class="fa-solid fa-dog"></i></h5>
+                            <p class="card-text"><?php echo $dogToy->description; ?></p>
                         </div>
+                        <ul class="list-group list-group-flush pb-3 rounded">
+                            <li class="list-group-item">Price: $<?php echo $dogToy->price; ?></li>
+                            <li class="list-group-item">Brand: <?php echo $dogToy->brand; ?></li>
+                            <li class="list-group-item">Material: <?php echo $dogToy->material; ?></li>
+                            <li class="list-group-item">Age Group: <?php echo $dogToy->ageGroup; ?></li>
+                            <li class="list-group-item">Interactive: <?php echo $dogToy->interactive ? 'Yes' : 'No'; ?>
+                            </li>
+                            <li class="list-group-item">Durability: <?php echo $dogToy->durability; ?></li>
+                            <li class="list-group-item">Play Style: <?php echo $dogToy->playStyle; ?></li>
+                        </ul>
+                    </div>
                     <?php endforeach; ?>
 
                     <!-- cat items  -->
-                    <?php foreach ($filteredToys as $catToy) : ?>
-                        <div class="card m-2 bg-success" style="width: 18rem;">
-                            <!-- Immagine: <img src="<?php echo $catToy->imageUrl; ?>" class="card-img-top" alt="..."> -->
-                            <div class="card-body">
-                                <h5 class="card-title"><?php echo $catToy->name; ?> <i class="fa-solid fa-cat"></i></h5>
-                                <p class="card-text"><?php echo $catToy->description; ?></p>
-                            </div>
-                            <ul class="list-group list-group-flush pb-3 rounded">
-                                <li class="list-group-item">Price: $<?php echo $catToy->price; ?></li>
-                                <li class="list-group-item">Brand: <?php echo $catToy->brand; ?></li>
-                                <li class="list-group-item">Material: <?php echo $catToy->material; ?></li>
-                                <li class="list-group-item">Age Group: <?php echo $catToy->ageGroup; ?></li>
-                                <li class="list-group-item">Interactive: <?php echo $catToy->interactive ? 'Yes' : 'No'; ?>
-                                </li>
-                                <li class="list-group-item">Durability: <?php echo $catToy->durability; ?></li>
-                                <li class="list-group-item">Play Style: <?php echo $catToy->playStyle; ?></li>
-                            </ul>
+                    <?php foreach ($filteredToysCat as $catToy) : ?>
+                    <div class="card m-2 bg-success" style="width: 18rem;">
+                        <!-- Immagine: <img src="<?php echo $catToy->imageUrl; ?>" class="card-img-top" alt="..."> -->
+                        <div class="card-body">
+                            <h5 class="card-title"><?php echo $catToy->name; ?> <i class="fa-solid fa-cat"></i></h5>
+                            <p class="card-text"><?php echo $catToy->description; ?></p>
                         </div>
+                        <ul class="list-group list-group-flush pb-3 rounded">
+                            <li class="list-group-item">Price: $<?php echo $catToy->price; ?></li>
+                            <li class="list-group-item">Brand: <?php echo $catToy->brand; ?></li>
+                            <li class="list-group-item">Material: <?php echo $catToy->material; ?></li>
+                            <li class="list-group-item">Age Group: <?php echo $catToy->ageGroup; ?></li>
+                            <li class="list-group-item">Interactive: <?php echo $catToy->interactive ? 'Yes' : 'No'; ?>
+                            </li>
+                            <li class="list-group-item">Durability: <?php echo $catToy->durability; ?></li>
+                            <li class="list-group-item">Play Style: <?php echo $catToy->playStyle; ?></li>
+                        </ul>
+                    </div>
                     <?php endforeach; ?>
 
                     <!-- dog beds -->
                     <?php foreach ($filteredBeds as $dogBed) : ?>
-                        <div class="card m-2 bg-danger" style="width: 18rem;">
-                            <!-- Immagine: <img src="<?php echo $dogBed->imageUrl; ?>" class="card-img-top" alt="..."> -->
-                            <div class="card-body">
-                                <h5 class="card-title"><?php echo $dogBed->name; ?> <i class="fa-solid fa-dog"></i></h5>
-                                <p class="card-text"><?php echo $dogBed->description; ?></p>
-                            </div>
-                            <ul class="list-group list-group-flush pb-3 rounded">
-                                <li class="list-group-item">Price: $<?php echo $dogBed->price; ?></li>
-                                <li class="list-group-item">Brand: <?php echo $dogBed->brand; ?></li>
-                                <li class="list-group-item">Material: <?php echo $dogBed->material; ?></li>
-                                <li class="list-group-item">Brand: <?php echo $dogBed->brand; ?></li>
-                                <li class="list-group-item">Design: <?php echo $dogBed->design; ?></li>
-                                <li class="list-group-item">Washable: <?php echo $dogBed->washable ? 'Yes' : 'No'; ?></li>
-                            </ul>
+                    <div class="card m-2 bg-danger" style="width: 18rem;">
+                        <!-- Immagine: <img src="<?php echo $dogBed->imageUrl; ?>" class="card-img-top" alt="..."> -->
+                        <div class="card-body">
+                            <h5 class="card-title"><?php echo $dogBed->name; ?> <i class="fa-solid fa-dog"></i></h5>
+                            <p class="card-text"><?php echo $dogBed->description; ?></p>
                         </div>
+                        <ul class="list-group list-group-flush pb-3 rounded">
+                            <li class="list-group-item">Price: $<?php echo $dogBed->price; ?></li>
+                            <li class="list-group-item">Brand: <?php echo $dogBed->brand; ?></li>
+                            <li class="list-group-item">Material: <?php echo $dogBed->material; ?></li>
+                            <li class="list-group-item">Brand: <?php echo $dogBed->brand; ?></li>
+                            <li class="list-group-item">Design: <?php echo $dogBed->design; ?></li>
+                            <li class="list-group-item">Washable: <?php echo $dogBed->washable ? 'Yes' : 'No'; ?></li>
+                        </ul>
+                    </div>
                     <?php endforeach; ?>
 
                     <!-- cat beds -->
-                    <?php foreach ($filteredBeds as $catBed) : ?>
-                        <div class="card m-2 bg-info" style="width: 18rem;">
-                            <!-- Immagine: <img src="<?php echo $catBed->imageUrl; ?>" class="card-img-top" alt="..."> -->
-                            <div class="card-body">
-                                <h5 class="card-title"><?php echo $catBed->name; ?> <i class="fa-solid fa-cat"></i></h5>
-                                <p class="card-text"><?php echo $catBed->description; ?></p>
-                            </div>
-                            <ul class="list-group list-group-flush pb-3 rounded">
-                                <li class="list-group-item">Price: $<?php echo $catBed->price; ?></li>
-                                <li class="list-group-item">Brand: <?php echo $catBed->brand; ?></li>
-                                <li class="list-group-item">Material: <?php echo $catBed->material; ?></li>
-                                <li class="list-group-item">Design: <?php echo $catBed->design; ?></li>
-                                <li class="list-group-item">Washable: <?php echo $catBed->washable ? 'Yes' : 'No'; ?></li>
-                                <li class="list-group-item">Orthopedic: <?php echo $catBed->orthopedic ? 'Yes' : 'No'; ?>
-                                </li>
-                                <li class="list-group-item">Bed Size: <?php echo $catBed->bedSize; ?></li>
-                            </ul>
+                    <?php foreach ($filteredBedsCat as $catBed) : ?>
+                    <div class="card m-2 bg-info" style="width: 18rem;">
+                        <!-- Immagine: <img src="<?php echo $catBed->imageUrl; ?>" class="card-img-top" alt="..."> -->
+                        <div class="card-body">
+                            <h5 class="card-title"><?php echo $catBed->name; ?> <i class="fa-solid fa-cat"></i></h5>
+                            <p class="card-text"><?php echo $catBed->description; ?></p>
                         </div>
+                        <ul class="list-group list-group-flush pb-3 rounded">
+                            <li class="list-group-item">Price: $<?php echo $catBed->price; ?></li>
+                            <li class="list-group-item">Brand: <?php echo $catBed->brand; ?></li>
+                            <li class="list-group-item">Material: <?php echo $catBed->material; ?></li>
+                            <li class="list-group-item">Design: <?php echo $catBed->design; ?></li>
+                            <li class="list-group-item">Washable: <?php echo $catBed->washable ? 'Yes' : 'No'; ?></li>
+                            <li class="list-group-item">Orthopedic: <?php echo $catBed->orthopedic ? 'Yes' : 'No'; ?>
+                            </li>
+                            <li class="list-group-item">Bed Size: <?php echo $catBed->bedSize; ?></li>
+                        </ul>
+                    </div>
                     <?php endforeach; ?>
 
                 </div>
