@@ -37,6 +37,25 @@ class DogToy extends DOG
         $this->playStyle = $playStyle;
     }
 }
+
+// classe estesa per cucce DOG 
+class DogBed extends DOG
+{
+    public $bedSize;
+    public $washable;
+    public $orthopedic;
+    public $design;
+
+    public function __construct($name, $price, $material, $brand, $bedSize, $washable, $orthopedic, $design)
+    {
+        parent::__construct($name, $price, $material, null, $brand, null, null, null, null, null);
+        $this->bedSize = $bedSize;
+        $this->washable = $washable;
+        $this->orthopedic = $orthopedic;
+        $this->design = $design;
+    }
+}
+
 // objects
 
 // DogToy
