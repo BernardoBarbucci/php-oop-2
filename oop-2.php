@@ -92,7 +92,7 @@ if ($currentCategory === 'dog') {
             <section class="container-fluid">
                 <div class="row p-3 d-flex justify-content-center">
                     <!-- dog items -->
-                    <?php foreach ($dogToys as $dogToy) : ?>
+                    <?php foreach ($filteredToys as $dogToy) : ?>
                         <div class="card m-2 bg-primary" style="width: 18rem;">
                             <!-- Immagine: <img src="<?php echo $dogToy->imageUrl; ?>" class="card-img-top" alt="..."> -->
                             <div class="card-body">
@@ -113,7 +113,7 @@ if ($currentCategory === 'dog') {
                     <?php endforeach; ?>
 
                     <!-- cat items  -->
-                    <?php foreach ($catToys as $catToy) : ?>
+                    <?php foreach ($filteredToys as $catToy) : ?>
                         <div class="card m-2 bg-success" style="width: 18rem;">
                             <!-- Immagine: <img src="<?php echo $catToy->imageUrl; ?>" class="card-img-top" alt="..."> -->
                             <div class="card-body">
@@ -134,7 +134,7 @@ if ($currentCategory === 'dog') {
                     <?php endforeach; ?>
 
                     <!-- dog beds -->
-                    <?php foreach ($dogBeds as $dogBed) : ?>
+                    <?php foreach ($filteredBeds as $dogBed) : ?>
                         <div class="card m-2 bg-danger" style="width: 18rem;">
                             <!-- Immagine: <img src="<?php echo $dogBed->imageUrl; ?>" class="card-img-top" alt="..."> -->
                             <div class="card-body">
@@ -153,7 +153,7 @@ if ($currentCategory === 'dog') {
                     <?php endforeach; ?>
 
                     <!-- cat beds -->
-                    <?php foreach ($catBeds as $catBed) : ?>
+                    <?php foreach ($filteredBeds as $catBed) : ?>
                         <div class="card m-2 bg-info" style="width: 18rem;">
                             <!-- Immagine: <img src="<?php echo $catBed->imageUrl; ?>" class="card-img-top" alt="..."> -->
                             <div class="card-body">
